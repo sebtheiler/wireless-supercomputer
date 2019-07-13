@@ -19,9 +19,9 @@ try:
         int(IP)
         print('Must specify IP, then port.  Use -h or --help for help.')
         exit()
-    except:
+    except Exception:
         pass
-except:
+except Exception:
     print('Must specify IP and port values.  Use -h or --help for help.')
     exit()
 
@@ -33,7 +33,7 @@ try:
     else:
         print('Port value must be no less than 1024 and no greater than 65535.')
         exit()
-except:
+except Exception:
     print('Must specify port value.  Use -h or --help for help.')
     exit()
 
