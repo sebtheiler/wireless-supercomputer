@@ -18,3 +18,7 @@ def handle_received(received, user_id):
     print('Received output from user #{}'.format(user_id))
     data.append(received)
     print(data)
+
+# To run:
+# On server: python3 server.py -m example_main.py -f example_functions.py
+# On client: python3 client.py SERVER_IP 12345
