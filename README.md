@@ -15,7 +15,8 @@ This program allows you to send functions to other computers on a local network 
 7. Run the client with `python3 client.py SERVER_IP PORT`
 
 For help with running `server.py` or `client.py` run `python3 server.py -h` or `python3 client.py -h` respectively.
-Basic examples will be added soon, and examples using Keras/Tensorflow will be added later.
+
+For a basic example, see `example_functions.py` and `example_main.py`.  More complicated examples using Tensorflow and Keras will be added soon.
 
 #### Disclaimer
 This program is in alpha and still greatly under development, so expect bugs.  This is not to be used on a public network nor is any developer of this program responsible for damage or information leaked because of this program.  You must be extremely careful when using this program with Tensorflow or Keras with a Tensorflow backend, as graphs become very tricky to manage.
