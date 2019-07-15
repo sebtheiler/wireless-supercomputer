@@ -68,7 +68,7 @@ except socket.error as e:
     print(str(e))
 
 sock.listen()
-print('Server Started on port', PORT)
+print('Server Started on port:', PORT, 'IP:', HOST)
 
 # For every client connected...
 def threaded_client(conn, addr, user_id):
