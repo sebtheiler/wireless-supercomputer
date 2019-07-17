@@ -20,3 +20,6 @@ For a basic example, see `example_functions.py` and `example_main.py`.  More com
 
 #### Disclaimer
 This program is in alpha and still greatly under development, so expect bugs.  This is not to be used on a public network nor is any developer of this program responsible for damage or information leaked because of this program.  You must be extremely careful when using this program with Tensorflow or Keras with a Tensorflow backend, as graphs become very tricky to manage.
+
+#### TODO:
+Add examples using Keras and/or Tensorflow.  Add on_connect and on_disconnect function.
