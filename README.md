@@ -1,8 +1,8 @@
-# wireless-supercomputer
+# wireless-supercomputer v0.1
 Connecting local computers to compute a problem.
 This program allows you to send functions to other computers on a local network and receive the computed output.
 
-# Documentation v0.1
+# Documentation
 1. Specify `PORT` in `main.py` to tell the server what port to run the program on.
 2. Write `functions.py` which will include all the functions that could possibly be executed on the client.
 3. Write `generate_function(user_id)` in `main.py` which will return 3 values: 
