@@ -10,7 +10,7 @@ import time
 if '-h' in sys.argv or '--help' in sys.argv:
     print('Usage: python3 client.py IP PORT')
     print('Example: python3 client.py 192.168.1.8 7777')
-    print('Full documentation at GITHUB LINK')
+    print('Full documentation at https://github.com/EvolvedSquid/wireless-supercomputer')
     exit()
 
 try:
@@ -59,7 +59,7 @@ class Connection:
             replaced = packet.replace(b'*L_?*', b'')
             if packet:
                 data.append(replaced)
-            if not packet or packet == b'' or b'*L_?*' in packet:
+            if b'*L_?*' in packet:
                 break
         file = b"".join(data)
 
@@ -72,7 +72,7 @@ class Connection:
             replaced = packet.replace(b'*L_?*', b'')
             if packet:
                 data.append(replaced)
-            if not packet or packet == b'' or b'*L_?*' in packet:
+            if b'*L_?*' in packet:
                 break
         filename = b"".join(data)
 
