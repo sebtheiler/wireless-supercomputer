@@ -11,7 +11,7 @@ if '-h' in sys.argv or '--help' in sys.argv:
     print('-m || --main      : Destination to main.py file. Required.')
     print('-f || --functions : Destination to functions.py file. Required.')
     print('-d || --debug     : Debug mode')
-    print('Full documentation at GITHUB LINK')
+    print('Full documentation at https://github.com/EvolvedSquid/wireless-supercomputer')
     exit()
 
 if '-m' in sys.argv:
