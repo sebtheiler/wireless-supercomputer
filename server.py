@@ -1,6 +1,5 @@
 import gc
 import pickle
-import dill
 import socket
 import sys
 import time
@@ -90,12 +89,15 @@ def threaded_client(conn, addr, user_id):
         if debug:
             print('Sending Function to', addr)
         process_data = main.generate_function(user_id)
-        if len(process_data) != 3:
-            print('Function data generated incorrectly. Expected a tuple of\
-            length 3, received a tuple of length {}'.format(len(process_data)))
+
+        if len(process_data) == 3:
+            data = pickle.dumps(process_data)
+        else:
+            print('Function data generated incorrectly. Expected a tuple of length 3, received a tuple of length {}'.format(len(process_data)))
             exit()
-        data = pickle.dumps(process_data)
-        conn.send(data + b'*L_?*')
+
+        conn.send(data)
+        conn.send(b'*L_?*')
         # Receives output as 'y'
         while True:
             try:
