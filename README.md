@@ -1,4 +1,4 @@
-# wireless-supercomputer v0.1
+# wireless-supercomputer v0.2
 Connecting local computers to compute a problem.
 This program allows you to send functions to other computers on a local network and receive the computed output.
 
