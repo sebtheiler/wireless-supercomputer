@@ -92,6 +92,8 @@ class Connection:
         data = []
         while True:
             packet = self.client.recv(1024)
+            if self.debug:
+                print(packet)
             replaced = packet.replace(b'*L_?*', b'')
             if packet:
                 data.append(replaced)
