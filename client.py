@@ -10,8 +10,12 @@ import time
 if '-h' in sys.argv or '--help' in sys.argv:
     print('Usage: python3 client.py IP PORT')
     print('Example: python3 client.py 192.168.1.8 7777')
-    print('Full documentation at https://github.com/EvolvedSquid/wireless-supercomputer')
+    print('Full documentation at GITHUB LINK')
     exit()
+
+DEBUG = False
+if '-d' in sys.argv or '--debug' in sys.argv:
+    DEBUG = True
 
 try:
     IP = sys.argv[1]
@@ -124,6 +128,6 @@ class Connection:
         return self.output
 
 
-c = Connection(IP, PORT)
+c = Connection(IP, PORT, DEBUG)
 while True:
     c.new()
